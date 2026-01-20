@@ -1,175 +1,169 @@
-Clarity – AI Decision Assistant
+# 🧠 Clarity – AI Decision Assistant
 
 Clarity is a full-stack generative AI decision-making agent that helps users make better, structured decisions by analyzing context, constraints, and preferences.
 
-It uses an AI agent built with PydanticAI, provides clear recommendations, reasoned explanations, confidence scores, and alternative options, all through a clean web interface.
+It uses an AI agent built with **PydanticAI** and provides clear recommendations, reasoned explanations, confidence scores, and alternative options through a clean web interface.
 
-🚀 Live Demo
+---
 
-(Add Netlify URL after deployment)
+## 🚀 Live Demo
 
-Frontend: https://your-netlify-link.netlify.app
+Frontend: https://your-netlify-link.netlify.app  
 Backend API: https://your-backend-url
 
-🎯 Problem Statement
+---
+
+## 🎯 Problem Statement
 
 People often struggle to make decisions because:
-
-Too many options
-
-Unclear priorities
-
-Conflicting constraints
-
-Lack of structured reasoning
+- Too many options
+- Unclear priorities
+- Conflicting constraints
+- Lack of structured reasoning
 
 Clarity solves this by acting as an AI-powered decision assistant that:
+- Breaks down decisions logically
+- Explains *why* a recommendation is made
+- Provides confidence levels and alternatives
 
-Breaks down decisions logically
+---
 
-Explains why a recommendation is made
+## 💡 Key Features
 
-Provides confidence levels and alternatives
+### AI Decision Agent
+- Built using **PydanticAI**
+- Structured input and output schemas
+- Predictable, validated AI responses
 
-💡 Key Features
-🔹 AI Decision Agent
-
-Built using PydanticAI
-
-Uses structured input/output schemas
-
-Ensures predictable, validated AI responses
-
-🔹 Structured Outputs
-
+### Structured Outputs
 Each decision includes:
+- One clear recommendation
+- Bullet-point reasoning
+- Confidence score (0–1)
+- One alternative option
 
-✅ One clear recommendation
+### Robust Backend
+- FastAPI-based API
+- Timeout handling
+- Safe fallback responses
+- Detailed logging
 
-🧠 Bullet-point reasoning
+### Clean Frontend UX
+- Simple and minimal UI
+- Loading and error states
+- Visual confidence indicator
+- Responsive design
 
-📊 Confidence score (0–1)
+---
 
-🔁 One alternative option
+## 🏗️ Tech Stack
 
-🔹 Robust Backend
+**Frontend**
+- HTML
+- CSS
+- JavaScript
+- Netlify
 
-FastAPI-based API
+**Backend**
+- Python
+- FastAPI
+- Pydantic & PydanticAI
+- OpenRouter (LLM provider)
 
-Timeout handling
+---
 
-Safe fallback responses
 
-Detailed logging for observability
+---
 
-🔹 Clean Frontend UX
+## 🔄 How It Works
 
-Simple, minimal UI
+1. User enters decision details in the frontend
+2. Frontend sends structured JSON to the backend
+3. PydanticAI agent processes the request
+4. LLM generates a response
+5. Output is validated using Pydantic schemas
+6. Structured response is returned to the UI
 
-Loading states & error handling
+---
 
-Visual confidence indicator
+## 🔐 Environment Variables
 
-Mobile responsive design
-
-🏗️ Tech Stack
-Frontend
-
-HTML
-
-CSS
-
-Vanilla JavaScript
-
-Hosted on Netlify
-
-Backend
-
-Python
-
-FastAPI
-
-Pydantic & PydanticAI
-
-OpenRouter (LLM provider)
-
-Hosted on Render / Railway🔄 API Flow (How It Works)
-
-User enters decision details in the frontend
-
-Frontend sends structured JSON to backend (/api/decision)
-
-PydanticAI agent processes the request
-
-LLM generates a response
-
-Response is validated using Pydantic schemas
-
-Structured output is returned to the UI
-
-UI displays recommendation + reasoning + confidenc eEnvironment Variables
-
-Create a .env file in backend/:
-
+Create a `.env` file inside `backend/`:
 OPENAI_API_KEY=your_openrouter_api_key
 MODEL_NAME=openai:gpt-4o-mini
 
 
-⚠️ .env is ignored by git for security.
-▶️ Run Locally
-Backend
+> The `.env` file is ignored by git for security.
+
+---
+
+## ▶️ Run Locally
+
+### Backend
 cd backend
 venv\Scripts\activate
 python -m uvicorn app.main:app --reload
 
 
-Backend runs at:
-
+Backend URL:
 http://localhost:8000
 
 
 Swagger Docs:
-
 http://localhost:8000/docs
 
-Frontend
 
-Open frontend/index.html
+---
 
-Or use Live Server in VS Code
+### Frontend
 
-🧪 Example Use Cases
+Open `frontend/index.html`  
+or use VS Code Live Server.
 
-Should I study DSA or ML first?
+---
 
-How should I prioritize my tasks today?
+## 🧪 Example Use Cases
 
-Should I buy or rent a laptop?
+- Should I study DSA or ML first?
+- How should I prioritize my tasks today?
+- Should I buy or rent a laptop?
+- How to choose between multiple career options?
 
-How to decide between multiple career options?
+---
 
-🛡️ Reliability & Safety
+## 🛡️ Reliability & Safety
 
-Timeout protection
+- Timeout protection
+- Safe fallback responses
+- Input validation
+- Graceful error handling
+- Structured logging
 
-Safe fallback responses
+---
 
-Input validation using Pydantic
+## 🌱 Future Improvements
 
-Graceful error handling
+- User authentication
+- Decision history
+- Multi-agent collaboration
+- Personalized memory
+- Improved UI animations
 
-Logging for debugging and monitoring
+---
 
-🌱 Future Improvements
+## 👤 Author
 
-User authentication
+Naviyasri S  
+B.Tech Student | AI & Full-Stack Enthusiast
 
-Decision history
+---
 
-Multi-agent decision collaboration
+## 🏁 Why This Project Stands Out
 
-Personalized memory
+- Uses agent-based AI, not just a chat wrapper
+- Strong backend engineering practices
+- Clean UX and product flow
+- Real-world practical use case
+- Easy to extend and scale
 
-Better UI animations
 
-Mobile-first PWA
