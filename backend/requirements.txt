@@ -3,3 +3,5 @@ uvicorn
 pydantic
 pydantic-ai
 python-dotenv
+httpx
+openai
