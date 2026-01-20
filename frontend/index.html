@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clarity - AI Decision Assistant for informed decision-making">
+    <title>Clarity – AI Decision Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="title">Clarity</h1>
+            <p class="subtitle">AI Decision Assistant</p>
+        </header>
+
+        <!-- Form Section -->
+        <section class="form-section">
+            <form id="decisionForm" class="decision-form" novalidate>
+                <!-- Decision Type Field -->
+                <div class="form-group">
+                    <label for="decisionType">Decision Type</label>
+                    <select id="decisionType" name="decisionType" required>
+                        <option value="">Select a decision type</option>
+                        <option value="Task Prioritization">Task Prioritization</option>
+                        <option value="Purchase Decision">Purchase Decision</option>
+                        <option value="Daily Planning">Daily Planning</option>
+                    </select>
+                </div>
+
+                <!-- Context Field -->
+                <div class="form-group">
+                    <label for="context">Decision Context</label>
+                    <textarea 
+                        id="context" 
+                        name="context" 
+                        placeholder="Describe the situation and background information..."
+                        rows="4"
+                        required>
+                    </textarea>
+                </div>
+
+                <!-- Constraints Field -->
+                <div class="form-group">
+                    <label for="constraints">Constraints</label>
+                    <textarea 
+                        id="constraints" 
+                        name="constraints" 
+                        placeholder="Enter constraints (one per line)..."
+                        rows="3">
+                    </textarea>
+                </div>
+
+                <!-- Preferences Field -->
+                <div class="form-group">
+                    <label for="preferences">Preferences (JSON)</label>
+                    <textarea 
+                        id="preferences" 
+                        name="preferences" 
+                        placeholder='{"key": "value"}'
+                        rows="3">
+                    </textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button id="submitBtn" type="submit" class="btn-primary">
+                    Decide for Me
+                </button>
+            </form>
+
+            <!-- Loading Spinner -->
+            <div id="loading" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing your decision...</p>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="result" class="result-section">
+            <!-- Results will be displayed here -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
